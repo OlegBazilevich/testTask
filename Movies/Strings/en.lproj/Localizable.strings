@@ -1,0 +1,18 @@
+// MARK: - Alert localization
+"somethingWentWrong" = "Something went wrong:";
+"noDataByThisParametrs" = "Unfortunately, no information was found for the given parameters.";
+"noConnection" = "You are offline. Please, enable your Wi-Fi or connect using cellular data.";
+"noConnectionShort" = "No internet connection";
+
+// MARK: - Base text
+"popularMovies" = "Popular Movies";
+"searchForMovies" = "Search for movies";
+"noData" = "No information";
+
+// MARK: - UIMenu text
+"filterByTitle" = "Filter by:";
+"sortByTitle" = "Sort by:";
+"yearTitle" = "Year";
+"regionTitle" = "Region";
+"voteAvaraggeTitle" = "Vote avarage";
+"popularityTitle" = "Popularity";
