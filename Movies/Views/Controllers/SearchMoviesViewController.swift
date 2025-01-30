@@ -1,9 +1,3 @@
-//
-//  SearchMoviesViewController.swift
-//  NatifeMovieAdvisor
-//
-//  Created by Леонід Шевченко on 13.01.2023.
-//
 
 import UIKit
 

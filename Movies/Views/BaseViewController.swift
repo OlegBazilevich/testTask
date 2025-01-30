@@ -1,9 +1,3 @@
-//
-//  BaseViewController.swift
-//  NatifeMovieAdvisor
-//
-//  Created by Леонід Шевченко on 16.01.2023.
-//
 
 import UIKit
 
@@ -29,22 +23,14 @@ class BaseViewController: UIViewController {
             self.present(alert, animated: true)
         } else {
             let movieID = models[indexPath.row].id
-            let movieDetailVC = MovieDetailsViewController(movieID: movieID)
+            let movieDetailVC = DetailsScreenVC(movieID: movieID ?? 0)
             navigationController?.pushViewController(movieDetailVC, animated: true)
         }
     }
 
-    func configurePopMovieCellForItem(
-        models: [PopMoviesResponseModel],
-        tableView: UITableView,
-        indexPath: IndexPath
-    ) -> UITableViewCell {
-        guard
-            let cell = tableView.dequeueReusableCell(
-                withIdentifier: MovieTableViewCell.identifier
-            ) as? MovieTableViewCell
-        else {
-            return UITableViewCell()
+    func configurePopMovieCellForItem(models: [PopMoviesResponseModel],tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier) as? MovieTableViewCell
+        else { return UITableViewCell()
         }
 
         let movie = models[indexPath.row]

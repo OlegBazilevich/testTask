@@ -1,13 +1,13 @@
-//
-//  Constants.swift
-//  NatifeMovieAdvisor
-//
-//  Created by Леонід Шевченко on 11.01.2023.
-//
 
 import UIKit
 
-enum Constants {
+struct Constants {
+    enum Fonts {
+        static let semibold = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        static let light = UIFont.systemFont(ofSize: 16, weight: .light)
+
+    }
+    
     enum AlertAnswers {
         static var somethingWentWrongAnswear = "somethingWentWrong".localized()
         static var noDataByThisParametrs = "noDataByThisParametrs".localized()
@@ -15,11 +15,7 @@ enum Constants {
         static var noConnectionShort = "noConnectionShort".localized()
     }
 
-    enum Fonts {
-        static let smallRegularFont = UIFont.systemFont(ofSize: 16, weight: .regular)
-        static let mediumSemiBoldFont = UIFont.systemFont(ofSize: 18, weight: .semibold)
-        static let bigSemiBoldFont = UIFont.systemFont(ofSize: 27, weight: .black)
-    }
+    
 
     enum MenuTexts {
         static let filterByTitle = "filterByTitle".localized()

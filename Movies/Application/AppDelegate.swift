@@ -2,15 +2,13 @@
 //  AppDelegate.swift
 //  Movies
 //
-//  Created by Oleg Bazilevich on 28.01.2025.
+//  Created by Oleg Bazilevich on 27.01.2025.
 //
 
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

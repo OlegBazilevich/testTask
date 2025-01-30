@@ -1,9 +1,3 @@
-//
-//  MovieTableViewCell.swift
-//  NatifeMovieAdvisor
-//
-//  Created by Леонід Шевченко on 10.01.2023.
-//
 
 import UIKit
 import SnapKit
@@ -37,7 +31,7 @@ final class MovieTableViewCell: UITableViewCell {
     }
 
     private lazy var movieTitleLabel: UILabel = build {
-        $0.font = Constants.Fonts.bigSemiBoldFont
+        $0.font = Constants.Fonts.semibold
         $0.textAlignment = .center
         $0.numberOfLines = 2
         $0.text = Constants.noData
@@ -47,21 +41,21 @@ final class MovieTableViewCell: UITableViewCell {
     }
 
     private lazy var voteAverageLabel: UILabel = build {
-        $0.font = Constants.Fonts.mediumSemiBoldFont
+        $0.font = Constants.Fonts.light
         $0.textAlignment = .center
         $0.text = Constants.noData
         $0.textColor = .white
     }
 
     private lazy var releaseDateLabel: UILabel = build {
-        $0.font = Constants.Fonts.mediumSemiBoldFont
+        $0.font = Constants.Fonts.light
         $0.textAlignment = .center
         $0.text = Constants.noData
         $0.textColor = .white
     }
 
     private lazy var genresLabel: UILabel = build {
-        $0.font = Constants.Fonts.mediumSemiBoldFont
+        $0.font = Constants.Fonts.light
         $0.textAlignment = .center
         $0.text = Constants.noData
         $0.textColor = .white
@@ -109,14 +103,14 @@ final class MovieTableViewCell: UITableViewCell {
 // MARK: - UI setup.
 extension MovieTableViewCell {
     private func setupSubviews() {
-        contentView.makeShadow()
+//        contentView.makeShadow()
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 12, left: 16, bottom: 12, right: 16))
         contentView.addSubview(posterImageView)
         posterImageView.addSubview(gradientView)
         gradientView.addSubview(contentStackView)
 
         [
-            movieTitleLabel,
+    movieTitleLabel,
             genresLabel,
             voteAverageLabel,
             releaseDateLabel
