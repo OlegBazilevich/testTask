@@ -6,7 +6,7 @@
 
 // MARK: - Base text
 "popularMovies" = "Популярні фільми";
-"searchForMovies" = "Введіть назву бажаного фільму";
+"searchForMovies" = "Введіть назву фільму";
 "noData" = "Інформація відсутня";
 
 // MARK: - Genres
@@ -31,6 +31,7 @@
 "Western" = "Вестерни";
 
 // MARK: - UIMenu text
+"cancel" = "Відміна";
 "filterByTitle" = "Фільтрувати за:";
 "sortByTitle" = "Сортувати за:";
 "yearTitle" = "Рік";

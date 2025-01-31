@@ -13,13 +13,13 @@ final class NetworkMonitor {
     func startMonitoring() {
         reachability?.whenReachable = { [ weak self ] reachability in
             if self?.reachability?.connection != .unavailable {
-                print("🌐 Connection - ✅")
+                print("Connected")
                 self?.isConnected = true
             }
         }
 
         reachability?.whenUnreachable = { _ in
-            print("🌐 Connection - ❌")
+            print("No Connection")
             self.isConnected = false
         }
 

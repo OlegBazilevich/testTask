@@ -38,7 +38,7 @@ final class RestService {
         debugPrint(url)
         
         if let encoded = url.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) {
-           
+            
             AF.request(
                 encoded,
                 method: method,

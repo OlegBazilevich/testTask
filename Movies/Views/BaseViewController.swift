@@ -23,16 +23,13 @@ class BaseViewController: UIViewController {
             self.present(alert, animated: true)
         } else {
             let movieID = models[indexPath.row].id
-            let movieDetailVC = DetailsScreenVC(movieID: movieID ?? 0)
+            let movieDetailVC = DetailsScreenVC(movieID: movieID)
             navigationController?.pushViewController(movieDetailVC, animated: true)
         }
     }
 
     func configurePopMovieCellForItem(models: [PopMoviesResponseModel],tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier) as? MovieTableViewCell
-        else { return UITableViewCell()
-        }
-
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier) as? MovieTableViewCell else { return UITableViewCell()}
         let movie = models[indexPath.row]
         cell.configure(MovieTableViewCellViewModel(with: movie))
         cell.selectionStyle = .none

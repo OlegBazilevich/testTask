@@ -6,10 +6,11 @@
 
 // MARK: - Base text
 "popularMovies" = "Popular Movies";
-"searchForMovies" = "Search for movies";
+"searchForMovies" = "Search";
 "noData" = "No information";
 
 // MARK: - UIMenu text
+"cancel" = "Cancel";
 "filterByTitle" = "Filter by:";
 "sortByTitle" = "Sort by:";
 "yearTitle" = "Year";
