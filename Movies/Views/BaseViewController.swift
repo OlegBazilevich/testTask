@@ -4,7 +4,6 @@ import UIKit
 class BaseViewController: UIViewController {
     let networkMonitor = NetworkMonitor.shared
 
-    // MARK: - DataSource/Delegate methods
     func presentMovieDetailVC(
         models: [PopMoviesResponseModel],
         indexPath: IndexPath

@@ -1,5 +1,4 @@
 
-
 import UIKit
 import Kingfisher
 import YouTubeiOSPlayerHelper
@@ -13,7 +12,11 @@ final class DetailsScreenVC: UIViewController, UIGestureRecognizerDelegate {
         super.init(nibName: nil, bundle: nil)
     }
     
-    private lazy var scrollView: UIScrollView = build { $0.backgroundColor = .clear }
+    private lazy var scrollView: UIScrollView = build {
+        $0.backgroundColor = .clear
+        $0.showsVerticalScrollIndicator = false
+    }
+    
     private lazy var contentStackView: UIStackView = build { $0.axis = .vertical }
     private lazy var countryAndReleaseDateStackView: UIStackView = build { $0.axis = .horizontal }
     
