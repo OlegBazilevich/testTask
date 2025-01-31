@@ -21,6 +21,7 @@ final class MovieTableViewCell: UITableViewCell {
             $0.textColor = .white
             $0.backgroundColor = UIColor.black.withAlphaComponent(0.5)
             $0.layer.cornerRadius = 5
+            $0.numberOfLines = 0
             $0.layer.masksToBounds = true
         }
     }
@@ -51,7 +52,7 @@ final class MovieTableViewCell: UITableViewCell {
             
             if let date = dateFormatter.date(from: releaseDate) {
                 let yearFormatter = DateFormatter()
-                yearFormatter.dateFormat = ", yyyy"
+                yearFormatter.dateFormat = "yyyy"
                 let yearString = yearFormatter.string(from: date)
                 releaseDateLabel.text = yearString
             } else {
@@ -100,17 +101,17 @@ final class MovieTableViewCell: UITableViewCell {
         }
         
         title.snp.makeConstraints {
-            $0.top.leading.equalToSuperview().inset(10)
+            $0.top.leading.trailing.equalToSuperview().inset(10)
         }
         
         releaseDateLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(10)
-            $0.leading.equalTo(title.snp.trailing).inset(-2)
+            $0.top.equalTo(title.snp.bottom).offset(20)
+            $0.leading.equalToSuperview().inset(10)
         }
         
         voteAverageLabel.snp.makeConstraints {
-            $0.top.equalTo(title.snp.bottom).offset(10)
-            $0.leading.equalTo(title.snp.leading)
+            $0.top.equalTo(releaseDateLabel.snp.bottom).offset(20)
+            $0.leading.equalToSuperview().inset(10)
         }
         
         genresLabel.snp.makeConstraints {
